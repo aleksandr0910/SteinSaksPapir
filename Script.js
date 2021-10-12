@@ -29,6 +29,7 @@ function Brukervalg(item){                  //fungerer som en dommer
     if(item.weakness == botValg.name)vinntietap("lost");
     if(item.name == botValg.name )vinntietap("tie");
     if(item.name == botValg.weakness)vinntietap("win");
+   
 }
 function vinntietap(status){                //logger poengene til spiller og bot
     if (status == "win") highscore++
@@ -37,7 +38,8 @@ function vinntietap(status){                //logger poengene til spiller og bot
     robotantall.innerHTML = botScore;
     score.innerHTML = highscore;
     Resultat.innerHTML = status;
-    omspill()
+    omspill();
+    
 }
 
 var intervalID
@@ -55,9 +57,21 @@ function nedtelling(){                      //teller ned
     if(timer==-1)clearInterval(intervalID)
 }
 
+
 function omspill(){
     if (highscore == 2 || botScore == 2){
         robotantall = null;
         score = null;
+        Resultat.innerHTML = "Spill ferdig";
+       setTimeout(()=> {ferdig()},100);}
+    }
+function ferdig(){
+    if (highscore == 2){
+        alert("du vant");
+    }
+    if (botScore == 2){
+        alert("du tapte");
     }
 }
+
+

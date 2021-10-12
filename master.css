@@ -4,31 +4,42 @@ body{
 }
 
 h1{
-    font-size: 40pt;
+    margin-top:20px;
+    font-size: 70pt;
 }
 
 button{    
-    margin-top: 350px;
+
     background-color: greenyellow;
     
 }
-
+#knappen{
+    margin-top:30px;
+}
+li{
+    list-style-type: none;
+}
+#hjem{
+    margin-top:20px;
+}
 #kropp{
+    
     background-color: rgb(150, 105, 255);
 }
 
 #tall{
-    font-size: 100pt;
-    
+    font-size: 90pt;
 }
-
 img{
     width:20%;
+    margin-top:30px;
     
 }
 
-#startspill{
-    
+.Regler{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:15pt;
+    margin:20px;
 }
 
 #wincondition{
