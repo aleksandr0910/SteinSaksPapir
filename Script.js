@@ -26,6 +26,11 @@ var botScore = 0
 
 function Brukervalg(item){                  //fungerer som en dommer
     const botValg = spill[Math.round(Math.random()*2)]
+    console.log(timer);
+    if(timer > -1){
+        vinntietap("lost");
+         return
+     }
     if(item.weakness == botValg.name)vinntietap("lost");
     if(item.name == botValg.name )vinntietap("tie");
     if(item.name == botValg.weakness)vinntietap("win");
@@ -46,7 +51,7 @@ var intervalID
 function play(){
     nedtelling()
     timer = 3;
-    intervalID = setInterval(nedtelling, 1000);
+    intervalID = setInterval(nedtelling, 700);
 }
 knapp.addEventListener("click", play)
 
@@ -55,6 +60,7 @@ var timer = 3;
 function nedtelling(){                      //teller ned
     document.getElementById("demo").innerHTML = timer--;
     if(timer==-1)clearInterval(intervalID)
+  
 }
 
 
@@ -73,5 +79,4 @@ function ferdig(){
         alert("du tapte");
     }
 }
-
 
