@@ -29,6 +29,7 @@ function Brukervalg(item){                  //fungerer som en dommer
     console.log(timer);
     if(timer > -1){
         vinntietap("lost");
+        document.getElementById("Fast").innerHTML = "Du er for rask!";
          return
      }
     if(item.weakness == botValg.name)vinntietap("lost");
@@ -52,6 +53,8 @@ function play(){
     nedtelling()
     timer = 3;
     intervalID = setInterval(nedtelling, 700);
+    document.getElementById("Fast").innerHTML = "";
+    vinntietap();
 }
 knapp.addEventListener("click", play)
 
@@ -69,6 +72,7 @@ function omspill(){
         robotantall = null;
         score = null;
         Resultat.innerHTML = "Spill ferdig";
+        
        setTimeout(()=> {ferdig()},100);}
     }
 function ferdig(){

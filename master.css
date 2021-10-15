@@ -4,7 +4,6 @@ body{
 }
 
 h1{
-    margin-top:20px;
     font-size: 70pt;
 }
 
@@ -29,11 +28,15 @@ li{
 
 #tall{
     font-size: 90pt;
+    margin-top:-25px;
+}
+
+#demo{
+    margin-top: -70px;
 }
 img{
     width:20%;
-    margin-top:30px;
-    
+    margin-top: 30px;
 }
 
 .Regler{
@@ -51,4 +54,8 @@ img{
     font-size:20pt;
     margin-top: -54px;
     margin-left: 700px;
+}
+.HTP{
+    font-size: 40pt;
+
 }
